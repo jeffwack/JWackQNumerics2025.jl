@@ -78,3 +78,9 @@ Template:
       aqua_kwargs: NamedTuple()
       jet: false
 ```
+
+## Github Pages
+
+Go to repository settings, deploy from a branch, gh-pages /root.
+
+Now the docs appear on the dev branch. 
