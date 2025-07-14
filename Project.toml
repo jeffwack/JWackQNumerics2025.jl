@@ -1,0 +1,13 @@
+name = "JWackQNumerics2025"
+uuid = "e76a225b-164e-40f2-a44b-57842800a02c"
+authors = ["Jeffrey Wack <jeffwack111@gmail.com> and contributors"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.11"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
