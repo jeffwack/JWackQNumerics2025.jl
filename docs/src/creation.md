@@ -83,4 +83,11 @@ Template:
 
 Go to repository settings, deploy from a branch, gh-pages /root.
 
-Now the docs appear on the dev branch. 
+Now the docs appear on the dev branch. Clicking on the stable badge leads to a
+404 error. 
+
+## First release
+
+I created a release, v1.0, on GitHub. This triggered the CI workflow, which
+includes a 'Documentation' action. Now the documentation appears on both badges,
+stable and dev. 
