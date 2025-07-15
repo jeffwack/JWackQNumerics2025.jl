@@ -16,6 +16,8 @@ makedocs(;
         "Home" => "index.md",
         "Creating this package" => "creation.md",
         "Monday" => "monday.md",
+        "Tuesday morning" => "tuesday.md",
+        "Tuesday afternoon" => "tuesday_afternoon.md",
     ],
 )
 

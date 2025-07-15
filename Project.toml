@@ -4,10 +4,22 @@ authors = ["Jeffrey Wack <jeffwack111@gmail.com> and contributors"]
 version = "1.0.0-DEV"
 
 [deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+OrdinaryDiffEqTsit5 = "b1df2697-797e-41e3-8120-5422d3b24e4a"
+OrdinaryDiffEqVerner = "79d7bb75-1356-48c1-b8c0-6832512096c2"
 Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
+QuantumOptics = "6e0679c1-51ea-5a7c-ac74-d61b76210b0c"
+TypeTree = "04da0e3b-1cad-4b2c-a963-fc1602baf1af"
 
 [compat]
+BenchmarkTools = "1.6.0"
+CairoMakie = "0.15.3"
+OrdinaryDiffEqTsit5 = "1.1.0"
+OrdinaryDiffEqVerner = "1.2.0"
 Pluto = "0.20.13"
+QuantumOptics = "1.2.3"
+TypeTree = "0.3.0"
 julia = "1.11"
 
 [extras]
