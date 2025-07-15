@@ -15,6 +15,7 @@ makedocs(;
     pages=[
         "Home" => "index.md",
         "Creating this package" => "creation.md",
+        "Monday" => "monday.md",
     ],
 )
 

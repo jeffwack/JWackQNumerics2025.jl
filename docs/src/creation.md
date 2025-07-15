@@ -90,4 +90,6 @@ Now the docs appear on the dev branch. Clicking on the stable badge leads to a
 
 I created a release, v1.0, on GitHub. This triggered the CI workflow, which
 includes a 'Documentation' action. Now the documentation appears on both badges,
-stable and dev. 
+stable and dev. I then pushed changes to the documentation, which appeared on
+the dev docs but not stable. From this I conclude the stable docs only update
+after a release. 

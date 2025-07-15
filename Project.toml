@@ -3,7 +3,11 @@ uuid = "e76a225b-164e-40f2-a44b-57842800a02c"
 authors = ["Jeffrey Wack <jeffwack111@gmail.com> and contributors"]
 version = "1.0.0-DEV"
 
+[deps]
+Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
+
 [compat]
+Pluto = "0.20.13"
 julia = "1.11"
 
 [extras]
