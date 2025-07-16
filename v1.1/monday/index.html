@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Julia and linear algebra · QNumerics2025.jl</title><meta name="title" content="Julia and linear algebra · QNumerics2025.jl"/><meta property="og:title" content="Julia and linear algebra · QNumerics2025.jl"/><meta property="twitter:title" content="Julia and linear algebra · QNumerics2025.jl"/><meta name="description" content="Documentation for QNumerics2025.jl."/><meta property="og:description" content="Documentation for QNumerics2025.jl."/><meta property="twitter:description" content="Documentation for QNumerics2025.jl."/><meta property="og:url" content="https://jeffwack.github.io/QNumerics2025.jl/monday/"/><meta property="twitter:url" content="https://jeffwack.github.io/QNumerics2025.jl/monday/"/><link rel="canonical" href="https://jeffwack.github.io/QNumerics2025.jl/monday/"/><script data-outdated-warner src="../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.050/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../search_index.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-mocha.css" data-theme-name="catppuccin-mocha"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-macchiato.css" data-theme-name="catppuccin-macchiato"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-frappe.css" data-theme-name="catppuccin-frappe"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-latte.css" data-theme-name="catppuccin-latte"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="../">QNumerics2025.jl</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li><a class="tocitem" href="../">Home</a></li><li><a class="tocitem" href="../creation/">Creating this package</a></li><li class="is-active"><a class="tocitem" href>Julia and linear algebra</a><ul class="internal"><li><a class="tocitem" href="#Other-resources"><span>Other resources</span></a></li><li><a class="tocitem" href="#Linear-Algebra"><span>Linear Algebra</span></a></li><li><a class="tocitem" href="#Sparse-Arrays"><span>Sparse Arrays</span></a></li></ul></li><li><a class="tocitem" href="../tuesday_morning/">Applying operators to quantum states</a></li><li><a class="tocitem" href="../tuesday_afternoon/">Schrodinger and Lindblad evolution</a></li><li><a class="tocitem" href="../tuesday_evening/">Monte Carlo wave function evolution</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Julia and linear algebra</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Julia and linear algebra</a></li></ul></nav><div class="docs-right"><a class="docs-navbar-link" href="https://github.com/jeffwack/QNumerics2025.jl" title="View the repository on GitHub"><span class="docs-icon fa-brands"></span><span class="docs-label is-hidden-touch">GitHub</span></a><a class="docs-navbar-link" href="https://github.com/jeffwack/QNumerics2025.jl/blob/main/docs/src/monday.md" title="Edit source on GitHub"><span class="docs-icon fa-solid"></span></a><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="Intro-to-Julia"><a class="docs-heading-anchor" href="#Intro-to-Julia">Intro to Julia</a><a id="Intro-to-Julia-1"></a><a class="docs-heading-anchor-permalink" href="#Intro-to-Julia" title="Permalink"></a></h1><p><a href="https://rayegun.github.io/JuliaIntro/">Julia Intro for QNumerics Summer School</a> by Raye Kimmerer.</p><h2 id="Other-resources"><a class="docs-heading-anchor" href="#Other-resources">Other resources</a><a id="Other-resources-1"></a><a class="docs-heading-anchor-permalink" href="#Other-resources" title="Permalink"></a></h2><p><a href="https://cheatsheet.juliadocs.org/">Julia cheat sheet</a></p><p><a href="https://modernjuliaworkflows.org/">Modern Julia Workflows</a></p><p><a href="https://mitmath.github.io/Parallel-Computing-Spoke/notebooks/PerformantSerialJulia.html">Performant Serial Julia</a></p><p><a href="https://github.com/jakobnissen/hardware_introduction">What scientists must know about hardware to write fast code</a></p><h2 id="Linear-Algebra"><a class="docs-heading-anchor" href="#Linear-Algebra">Linear Algebra</a><a id="Linear-Algebra-1"></a><a class="docs-heading-anchor-permalink" href="#Linear-Algebra" title="Permalink"></a></h2><p><a href="https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/">LinearAlgebra docs</a></p><pre><code class="language-julia hljs">using LinearAlgebra
+using SparseArrays
+using InteractiveUtils
+
+A = rand(100,100)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">100×100 Matrix{Float64}:
+ 0.689877   0.442898   0.337051    …  0.918166   0.931666   0.433926
+ 0.765819   0.904232   0.894542       0.152635   0.186052   0.0370883
+ 0.908652   0.586324   0.814448       0.28505    0.501902   0.986995
+ 0.628829   0.65289    0.960936       0.460261   0.76252    0.844714
+ 0.377951   0.182027   0.875066       0.936151   0.58245    0.125421
+ 0.93019    0.945633   0.519722    …  0.921993   0.604815   0.721738
+ 0.432319   0.359336   0.478482       0.569015   0.261859   0.177263
+ 0.208684   0.471807   0.861173       0.444832   0.218652   0.61552
+ 0.991222   0.248672   0.25356        0.978568   0.0260299  0.0491302
+ 0.697716   0.594812   0.681405       0.938027   0.738349   0.0676542
+ ⋮                                 ⋱                        
+ 0.789347   0.413027   0.0628976      0.0384678  0.957868   0.759315
+ 0.337977   0.408965   0.648698       0.316743   0.303481   0.711143
+ 0.572835   0.755868   0.119204       0.316745   0.443184   0.429889
+ 0.255512   0.559662   0.257568       0.978429   0.216569   0.913379
+ 0.181709   0.0309443  0.00711086  …  0.985471   0.416796   0.420845
+ 0.534554   0.331107   0.0664834      0.933714   0.568428   0.068777
+ 0.0728202  0.889997   0.513793       0.276813   0.875836   0.979584
+ 0.983905   0.0848033  0.9529         0.145434   0.872911   0.80546
+ 0.374269   0.899537   0.757362       0.0246773  0.364742   0.0248242</code></pre><p>Transpose and other operations are non-allocating, and instead create a wrapper of the original array. This prevents unecessary allocation and allows more  opportunity to dispatch on array types.</p><pre><code class="language-julia hljs">B = transpose(A)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">100×100 transpose(::Matrix{Float64}) with eltype Float64:
+ 0.689877   0.765819   0.908652  …  0.0728202  0.983905   0.374269
+ 0.442898   0.904232   0.586324     0.889997   0.0848033  0.899537
+ 0.337051   0.894542   0.814448     0.513793   0.9529     0.757362
+ 0.839381   0.778814   0.825507     0.0597193  0.37992    0.245574
+ 0.237912   0.233105   0.44183      0.852397   0.790491   0.632232
+ 0.0861786  0.635229   0.912296  …  0.578696   0.343724   0.420249
+ 0.0163067  0.0807648  0.753481     0.436245   0.863603   0.0628934
+ 0.875406   0.453432   0.753933     0.722678   0.539864   0.375855
+ 0.581084   0.216641   0.100293     0.48841    0.795991   0.258537
+ 0.0997436  0.278478   0.590193     0.931255   0.48242    0.494541
+ ⋮                               ⋱                        
+ 0.026961   0.901935   0.388902     0.354084   0.541073   0.521093
+ 0.747279   0.216566   0.474953     0.0675228  0.760942   0.232325
+ 0.930372   0.309718   0.291894     0.934471   0.844834   0.405043
+ 0.907233   0.555821   0.760701     0.0429174  0.285344   0.828271
+ 0.482254   0.521344   0.68237   …  0.196166   0.741738   0.668487
+ 0.0578316  0.849002   0.899415     0.736748   0.113914   0.860721
+ 0.918166   0.152635   0.28505      0.276813   0.145434   0.0246773
+ 0.931666   0.186052   0.501902     0.875836   0.872911   0.364742
+ 0.433926   0.0370883  0.986995     0.979584   0.80546    0.0248242</code></pre><pre><code class="language-julia hljs">C = copy(B)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">100×100 Matrix{Float64}:
+ 0.689877   0.765819   0.908652  …  0.0728202  0.983905   0.374269
+ 0.442898   0.904232   0.586324     0.889997   0.0848033  0.899537
+ 0.337051   0.894542   0.814448     0.513793   0.9529     0.757362
+ 0.839381   0.778814   0.825507     0.0597193  0.37992    0.245574
+ 0.237912   0.233105   0.44183      0.852397   0.790491   0.632232
+ 0.0861786  0.635229   0.912296  …  0.578696   0.343724   0.420249
+ 0.0163067  0.0807648  0.753481     0.436245   0.863603   0.0628934
+ 0.875406   0.453432   0.753933     0.722678   0.539864   0.375855
+ 0.581084   0.216641   0.100293     0.48841    0.795991   0.258537
+ 0.0997436  0.278478   0.590193     0.931255   0.48242    0.494541
+ ⋮                               ⋱                        
+ 0.026961   0.901935   0.388902     0.354084   0.541073   0.521093
+ 0.747279   0.216566   0.474953     0.0675228  0.760942   0.232325
+ 0.930372   0.309718   0.291894     0.934471   0.844834   0.405043
+ 0.907233   0.555821   0.760701     0.0429174  0.285344   0.828271
+ 0.482254   0.521344   0.68237   …  0.196166   0.741738   0.668487
+ 0.0578316  0.849002   0.899415     0.736748   0.113914   0.860721
+ 0.918166   0.152635   0.28505      0.276813   0.145434   0.0246773
+ 0.931666   0.186052   0.501902     0.875836   0.872911   0.364742
+ 0.433926   0.0370883  0.986995     0.979584   0.80546    0.0248242</code></pre><p>When we copy the array it allocates and is no longer a wrapper</p><pre><code class="language-julia hljs">Diagonal(A)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">100×100 LinearAlgebra.Diagonal{Float64, Vector{Float64}}:
+ 0.689877   ⋅         ⋅         ⋅        …   ⋅         ⋅         ⋅ 
+  ⋅        0.904232   ⋅         ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅        0.814448   ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅        0.170114      ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅        …   ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅         ⋅ 
+ ⋮                                       ⋱                      
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅        …   ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅           0.276813   ⋅         ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅        0.872911   ⋅ 
+  ⋅         ⋅         ⋅         ⋅            ⋅         ⋅        0.0248242</code></pre><pre><code class="language-julia hljs">subtypes(LinearAlgebra.Factorization)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">21-element Vector{Any}:
+ LinearAlgebra.AdjointFactorization
+ LinearAlgebra.BunchKaufman
+ LinearAlgebra.Cholesky
+ LinearAlgebra.CholeskyPivoted
+ LinearAlgebra.Eigen
+ LinearAlgebra.GeneralizedEigen
+ LinearAlgebra.GeneralizedSVD
+ LinearAlgebra.GeneralizedSchur
+ LinearAlgebra.Hessenberg
+ LinearAlgebra.LDLt
+ ⋮
+ LinearAlgebra.QR
+ LinearAlgebra.QRCompactWY
+ LinearAlgebra.QRPivoted
+ LinearAlgebra.SVD
+ LinearAlgebra.Schur
+ LinearAlgebra.TransposeFactorization
+ SparseArrays.CHOLMOD.Factor
+ SparseArrays.SPQR.QRSparse
+ SparseArrays.UMFPACK.UmfpackLU</code></pre><pre><code class="language-julia hljs">issymmetric(A*A&#39;)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">true</code></pre><p>How do we communicate this to the dispatch system?</p><pre><code class="language-julia hljs">D = Symmetric(A*A&#39;)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">100×100 LinearAlgebra.Symmetric{Float64, Matrix{Float64}}:
+ 36.9767  26.9739  28.2335  27.2151  …  25.9279  24.2946  27.1502  23.8749
+ 26.9739  33.7431  26.9764  24.8684     21.7457  22.2812  24.5202  25.6285
+ 28.2335  26.9764  34.3579  25.2187     22.0134  23.5851  25.069   23.3198
+ 27.2151  24.8684  25.2187  31.805      20.7167  22.7103  26.3492  22.4928
+ 28.2948  28.2536  27.6541  23.691      22.7564  23.1357  26.6059  24.2253
+ 27.4578  26.4579  25.6641  26.418   …  21.9073  21.7889  23.3432  23.7683
+ 26.4034  25.6938  25.3785  23.7964     22.1252  21.0764  24.0081  23.3219
+ 29.3402  28.0172  28.1854  25.3263     23.47    23.8132  26.6657  24.9575
+ 24.0686  23.7854  23.4124  21.2582     19.8021  19.134   21.8775  21.8944
+ 27.9855  25.7246  26.2124  25.5573     23.5242  22.8471  25.6106  22.403
+  ⋮                                  ⋱                             
+ 28.8021  26.6635  27.3892  26.0997     24.5376  24.0559  28.2537  25.6707
+ 25.3282  25.2905  25.1838  23.1105     21.9496  22.1394  24.7355  22.7307
+ 24.0841  24.2343  24.7356  23.4886     20.1049  22.4576  23.7177  21.3846
+ 28.1161  26.0753  27.4174  25.4254     24.6418  24.8304  26.3101  23.2327
+ 26.7324  24.3896  24.7577  23.5723  …  21.986   22.5309  24.979   22.7549
+ 25.9279  21.7457  22.0134  20.7167     28.5783  19.845   22.5999  19.972
+ 24.2946  22.2812  23.5851  22.7103     19.845   29.4085  22.2209  21.0628
+ 27.1502  24.5202  25.069   26.3492     22.5999  22.2209  32.6584  22.9931
+ 23.8749  25.6285  23.3198  22.4928     19.972   21.0628  22.9931  29.5572</code></pre><p>Now we can dispatch on the fact that this matrix is symmetric, allowing us to select more efficient algorithms for this case.</p><pre><code class="language-julia hljs">Symmetric(A)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">100×100 LinearAlgebra.Symmetric{Float64, Matrix{Float64}}:
+ 0.689877   0.442898   0.337051  …  0.918166   0.931666   0.433926
+ 0.442898   0.904232   0.894542     0.152635   0.186052   0.0370883
+ 0.337051   0.894542   0.814448     0.28505    0.501902   0.986995
+ 0.839381   0.778814   0.825507     0.460261   0.76252    0.844714
+ 0.237912   0.233105   0.44183      0.936151   0.58245    0.125421
+ 0.0861786  0.635229   0.912296  …  0.921993   0.604815   0.721738
+ 0.0163067  0.0807648  0.753481     0.569015   0.261859   0.177263
+ 0.875406   0.453432   0.753933     0.444832   0.218652   0.61552
+ 0.581084   0.216641   0.100293     0.978568   0.0260299  0.0491302
+ 0.0997436  0.278478   0.590193     0.938027   0.738349   0.0676542
+ ⋮                               ⋱                        
+ 0.026961   0.901935   0.388902     0.0384678  0.957868   0.759315
+ 0.747279   0.216566   0.474953     0.316743   0.303481   0.711143
+ 0.930372   0.309718   0.291894     0.316745   0.443184   0.429889
+ 0.907233   0.555821   0.760701     0.978429   0.216569   0.913379
+ 0.482254   0.521344   0.68237   …  0.985471   0.416796   0.420845
+ 0.0578316  0.849002   0.899415     0.933714   0.568428   0.068777
+ 0.918166   0.152635   0.28505      0.276813   0.875836   0.979584
+ 0.931666   0.186052   0.501902     0.875836   0.872911   0.80546
+ 0.433926   0.0370883  0.986995     0.979584   0.80546    0.0248242</code></pre><p>This is &#39;casting&#39; to a symmetric matrix, it will happily create a symmetric matrix out of a non-symmetric one.</p><h2 id="Sparse-Arrays"><a class="docs-heading-anchor" href="#Sparse-Arrays">Sparse Arrays</a><a id="Sparse-Arrays-1"></a><a class="docs-heading-anchor-permalink" href="#Sparse-Arrays" title="Permalink"></a></h2><pre><code class="language-julia hljs">A = sprand(100,100,0.1)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">100×100 SparseArrays.SparseMatrixCSC{Float64, Int64} with 961 stored entries:
+⎡⠢⡈⠀⡀⠄⠃⠠⠠⠀⠀⠀⠄⠀⠔⠀⡂⠬⠀⠄⠀⣀⠄⠠⡠⠀⠁⠈⠀⠄⠀⢅⠠⠈⠁⠰⠀⠀⠀⠑⠀⎤
+⎢⠁⠅⠒⢈⠄⠄⠈⡊⠀⠠⠀⠴⠀⠀⠈⡀⠀⠄⠀⠤⢀⠈⣀⡠⠁⠀⠀⠠⠀⠀⠢⠀⠠⠀⠈⠠⠀⡢⠔⠀⎥
+⎢⠀⡱⠄⠥⢀⠈⠀⡀⠀⢤⠠⡄⡐⡨⡠⠄⠀⠂⠄⢁⡒⠄⠀⠰⠨⡄⣰⠀⠄⠅⠐⠀⡠⠂⢀⢀⠍⠀⠀⠀⎥
+⎢⢐⠌⠅⠀⢅⠁⠈⠀⠢⠖⠍⠄⠡⠅⠄⠃⠐⠂⡅⠄⠥⡂⠀⠠⠠⢠⢔⡀⠀⠆⠀⠰⠀⠄⠠⠐⢤⠃⠀⠄⎥
+⎢⠁⠇⠀⠃⢀⠀⠀⠁⠐⠄⠀⡠⢀⠄⠀⠦⢀⠁⠀⡀⠀⠀⠄⠀⠀⠀⠂⠇⠀⠀⠨⠂⠐⠄⠀⠀⠄⠄⠈⠐⎥
+⎢⠀⠠⠀⠠⠀⠄⠀⠈⠀⠄⠈⢜⠠⠄⠀⠄⡄⠀⢀⡄⡠⠆⠁⢀⢤⠈⠈⢆⠄⠄⠄⠄⠀⠁⠈⢔⡥⠄⢀⠈⎥
+⎢⢀⠀⠌⠃⠀⠄⠀⠅⠡⠤⠪⠢⠈⢀⠂⣀⠀⠍⠘⠵⠐⡠⠸⢤⠌⠀⠐⠀⠰⠀⡄⠠⠰⠀⢀⠈⢠⠠⠰⠀⎥
+⎢⠀⠔⠆⡀⢀⡤⠠⠄⠠⠀⠁⡄⠐⠩⠀⡢⠀⠔⠀⠔⠀⠄⠠⠅⠐⠅⠔⠁⠀⠀⠀⢀⢂⠀⠥⠀⠠⡀⠈⠨⎥
+⎢⠀⠄⠀⡀⠀⡑⠀⠡⠊⡥⠀⡊⠡⠀⠈⠈⠀⠆⠀⠅⠀⠠⡉⢀⠰⠢⢱⠤⠄⠧⠡⠀⠠⠀⡀⠀⠀⡠⠌⠀⎥
+⎢⠁⠁⠀⠌⠠⠀⠜⠀⠀⠄⠰⡈⣀⠍⡀⠡⠠⠅⠀⡁⠠⠑⡀⠄⠘⠔⠠⠀⠡⠢⠨⢀⠠⠀⠌⠜⠀⠂⠴⠤⎥
+⎢⠀⠁⠀⡄⠄⠀⠀⠀⠀⠢⠐⠀⠀⠀⠀⠒⢀⠄⠠⡀⠐⠁⠀⠘⠄⠀⠠⢀⠤⠠⡨⠈⠀⠐⠀⠆⠀⠀⡘⠀⎥
+⎢⠀⠀⠀⠂⢆⠖⠐⠒⠠⠈⢀⠀⠁⠀⠂⠎⡀⠠⡀⠅⠁⠢⠀⠔⠐⡐⠀⠀⡌⠀⢐⠠⠐⠈⢐⠒⠐⠀⠈⠠⎥
+⎢⢐⠆⠄⡀⢈⠃⠀⠀⡀⠂⠀⠀⠀⠒⠠⠒⢀⠢⠄⠐⠀⠘⠘⠀⠢⠂⠈⠈⠠⠀⢂⠀⠃⠁⢀⠀⠐⠄⠎⠀⎥
+⎢⠀⠑⠀⠀⠂⢠⠆⠠⠄⠀⠀⡆⠥⠄⢔⢀⠀⠂⠈⠀⠈⠘⠀⠀⠉⠀⠀⡀⢅⢃⠠⡀⠠⠄⠀⠑⢓⢁⠊⠂⎥
+⎢⠤⢃⠀⠀⠐⠐⠃⡀⠁⠔⠁⠀⠐⠀⠀⠢⠁⠂⠐⠁⡀⠐⠑⠀⠢⡃⡉⠀⠀⠀⠈⢘⠠⢀⠂⢈⡨⠙⠋⠀⎥
+⎢⡃⠀⠈⠀⠈⢈⠀⠂⠁⠀⠀⠂⠀⠀⡠⠂⠄⠀⠐⠀⠁⠂⡐⠘⠀⢀⢡⠂⠀⠀⢀⣐⠑⠀⠰⠈⠡⠠⢀⡂⎥
+⎢⠌⠔⠀⢁⠐⠠⠀⡠⠀⠒⠂⠀⠂⡂⠠⠀⠐⠐⠁⠀⢈⡁⠉⠁⠉⠀⡠⠀⢀⠂⠀⡁⢀⠁⠀⠂⠐⡀⡐⠂⎥
+⎢⠐⠀⢀⠀⠡⠂⢂⡀⠀⠐⠂⢢⠀⠄⠀⡐⠀⠀⠒⠠⠈⠂⠀⠀⠈⠋⠰⠀⠐⠚⠈⠂⢈⠀⡸⢉⠤⠊⠀⠀⎥
+⎢⠂⠂⠐⡠⢀⠀⠀⠈⠀⣁⠡⠁⠀⠀⠠⠦⠀⠀⠀⠑⡀⠠⠲⠀⠀⢀⠀⠀⠀⠀⢐⠂⠁⠀⠎⠀⢬⠀⠀⠂⎥
+⎣⠀⠀⠁⠠⠐⠀⠀⠀⠂⠅⢰⠄⠀⠀⡄⠐⠂⠁⠐⡀⠠⠀⠂⠐⠌⠁⢨⠀⢀⢈⠀⠄⠀⠀⠔⠘⡐⠘⠐⡐⎦</code></pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../creation/">« Creating this package</a><a class="docs-footer-nextpage" href="../tuesday_morning/">Applying operators to quantum states »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.14.1 on <span class="colophon-date" title="Wednesday 16 July 2025 03:56">Wednesday 16 July 2025</span>. Using Julia version 1.11.6.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
