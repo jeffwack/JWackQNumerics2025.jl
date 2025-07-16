@@ -221,7 +221,4 @@ fig
 
 TODO: Lindblad is nonlinear with respect to collapse operators? 
 
-## Quantum trajectories 
-Claim: you should not use master equation solvers. You don't pay the exponential
-cost when working with classical probability distributions, instead we use Monte
-Carlo simulations. How can we do the same with quantum systems?
+
