@@ -1,4 +1,4 @@
-module JWackQNumerics2025
+module QNumerics2025
 
 # Write your package code here.
 

@@ -6,7 +6,7 @@ DocMeta.setdocmeta!(QNumerics2025, :DocTestSetup, :(using QNumerics2025); recurs
 makedocs(;
     modules=[QNumerics2025],
     authors="Jeffrey Wack <jeffwack111@gmail.com> and contributors",
-    sitename="JWackQNumerics2025.jl",
+    sitename="QNumerics2025.jl",
     format=Documenter.HTML(;
         canonical="https://jeffwack.github.io/QNumerics2025.jl",
         edit_link="main",

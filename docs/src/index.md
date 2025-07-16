@@ -1,14 +1,14 @@
 ```@meta
-CurrentModule = JWackQNumerics2025
+CurrentModule = QNumerics2025
 ```
 
-# JWackQNumerics2025
+# QNumerics2025
 
-Documentation for [JWackQNumerics2025](https://github.com/jeffwack/JWackQNumerics2025.jl).
+Created at [QNumerics2025](https://qnumerics.org/).
 
 ```@index
 ```
 
 ```@autodocs
-Modules = [JWackQNumerics2025]
+Modules = [QNumerics2025]
 ```

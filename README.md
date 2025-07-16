@@ -1,4 +1,4 @@
-# JWackQNumerics2025
+# QNumerics2025
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://jeffwack.github.io/JWackQNumerics2025.jl/stable/)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://jeffwack.github.io/JWackQNumerics2025.jl/dev/)
