@@ -72,6 +72,6 @@ jobs:
         shell: julia --project=docs --color=yes {0}
         run: |
           using Documenter: DocMeta, doctest
-          using JWackQNumerics2025
-          DocMeta.setdocmeta!(JWackQNumerics2025, :DocTestSetup, :(using JWackQNumerics2025); recursive=true)
-          doctest(JWackQNumerics2025)
+          using QNumerics2025
+          DocMeta.setdocmeta!(QNumerics2025, :DocTestSetup, :(using QNumerics2025); recursive=true)
+          doctest(QNumerics2025)
