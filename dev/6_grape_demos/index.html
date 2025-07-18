@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>GRAPE Demos · QNumerics2025.jl</title><meta name="title" content="GRAPE Demos · QNumerics2025.jl"/><meta property="og:title" content="GRAPE Demos · QNumerics2025.jl"/><meta property="twitter:title" content="GRAPE Demos · QNumerics2025.jl"/><meta name="description" content="Documentation for QNumerics2025.jl."/><meta property="og:description" content="Documentation for QNumerics2025.jl."/><meta property="twitter:description" content="Documentation for QNumerics2025.jl."/><meta property="og:url" content="https://jeffwack.github.io/QNumerics2025.jl/6_grape_demos/"/><meta property="twitter:url" content="https://jeffwack.github.io/QNumerics2025.jl/6_grape_demos/"/><link rel="canonical" href="https://jeffwack.github.io/QNumerics2025.jl/6_grape_demos/"/><script data-outdated-warner src="../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.050/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../search_index.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-mocha.css" data-theme-name="catppuccin-mocha"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-macchiato.css" data-theme-name="catppuccin-macchiato"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-frappe.css" data-theme-name="catppuccin-frappe"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-latte.css" data-theme-name="catppuccin-latte"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="../">QNumerics2025.jl</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li><a class="tocitem" href="../">Home</a></li><li><a class="tocitem" href="../creation/">Creating this package</a></li><li><a class="tocitem" href="../1_intro_to_julia/">Intro to Julia</a></li><li><a class="tocitem" href="../2_introduction_to_state_vector_simulation/">Introduction to State Vector Simulation</a></li><li><a class="tocitem" href="../3_dynamics_and_quantumoptics/">Dynamics and QuantumOptics.jl</a></li><li><a class="tocitem" href="../4_quantum_trajectories/">Quantum Trajectories</a></li><li><a class="tocitem" href="../5_optimization_methods/">Optimization Methods</a></li><li class="is-active"><a class="tocitem" href>GRAPE Demos</a><ul class="internal"><li><a class="tocitem" href="#Goals"><span>Goals</span></a></li><li><a class="tocitem" href="#I.-Isomorphisms"><span>I. Isomorphisms</span></a></li><li><a class="tocitem" href="#II.-Quantum-dynamics"><span>II. Quantum dynamics</span></a></li><li><a class="tocitem" href="#III.-GRAPE"><span>III. GRAPE</span></a></li><li><a class="tocitem" href="#IV.-Function-Spaces"><span>IV. Function Spaces</span></a></li><li><a class="tocitem" href="#V.-States-in-costs"><span>V. States in costs</span></a></li></ul></li><li><a class="tocitem" href="../7_trajectory_optimization/">Trajectory Optimization</a></li><li><a class="tocitem" href="../8_nonlinear_trajectory_optimization/">Nonlinear Trajectory Optimization</a></li><li><a class="tocitem" href="../9_quantum_trajectory_optimization/">Quantum Trajectory Optimization</a></li><li><a class="tocitem" href="../10_clifford/">Clifford</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>GRAPE Demos</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>GRAPE Demos</a></li></ul></nav><div class="docs-right"><a class="docs-navbar-link" href="https://github.com/jeffwack/QNumerics2025.jl" title="View the repository on GitHub"><span class="docs-icon fa-brands"></span><span class="docs-label is-hidden-touch">GitHub</span></a><a class="docs-navbar-link" href="https://github.com/jeffwack/QNumerics2025.jl/blob/main/docs/src/6_grape_demos.md" title="Edit source on GitHub"><span class="docs-icon fa-solid"></span></a><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="GRAPE-Demos"><a class="docs-heading-anchor" href="#GRAPE-Demos">GRAPE Demos</a><a id="GRAPE-Demos-1"></a><a class="docs-heading-anchor-permalink" href="#GRAPE-Demos" title="Permalink"></a></h1><pre><code class="language-julia hljs">using Piccolo
+using Optim
+using LinearAlgebra
+using SparseArrays
+using CairoMakie
+
+# useful
+const ⊗ = kron</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">kron (generic function with 61 methods)</code></pre><h2 id="Goals"><a class="docs-heading-anchor" href="#Goals">Goals</a><a id="Goals-1"></a><a class="docs-heading-anchor-permalink" href="#Goals" title="Permalink"></a></h2><ul><li>Learn the quantum isomorphisms that map variables to real-valued state vectors</li><li>Study how gradient descent and Newton&#39;s method can be used to optimize quantum controls.</li></ul><h2 id="I.-Isomorphisms"><a class="docs-heading-anchor" href="#I.-Isomorphisms">I. Isomorphisms</a><a id="I.-Isomorphisms-1"></a><a class="docs-heading-anchor-permalink" href="#I.-Isomorphisms" title="Permalink"></a></h2><p><strong>Piccolo isomorphisms</strong></p><ul><li>The standard quantum states are <em>kets</em>, <span>$|\psi\rangle$</span>, and <em>Unitaries</em>, <span>$U$</span>.</li><li>Open quantum system require <em>density matrices</em>, <span>$\rho$</span>, and <em>quantum channels</em>, <span>$\Phi$</span>.</li><li>Standard quantum states have an open system counterpart,</li></ul><p class="math-container">\[\begin{align}
+    \text{closed} &amp;\longrightarrow \text{open}  \\ \hline
+    |\psi\rangle &amp;\longrightarrow |\psi\rangle \langle \psi | \\
+    U &amp;\longrightarrow U \cdot U^\dagger 
+\end{align}\]</p><p>🚧 ⚠️ If you are seeing a lot of boxes like Ũ⃗, it is <em>very</em> useful to have the <a href="https://juliamono.netlify.app/">JuliaMono</a> fonts for Piccolo. Install and <a href="https://code.visualstudio.com/docs/terminal/appearance">change the default font family</a>.</p><pre><code class="language-julia hljs"># Ok, so it&#39;s not technically a wavefunction
+ψ = [1; 2] + im * [3; 4]
+
+ψ̃ = ket_to_iso(ψ)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">4-element Vector{Int64}:
+ 1
+ 2
+ 3
+ 4</code></pre><pre><code class="language-julia hljs">iso_to_ket(ψ̃)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">2-element Vector{Complex{Int64}}:
+ 1 + 3im
+ 2 + 4im</code></pre><pre><code class="language-julia hljs"># We often need to convert a complex matrix U to a real vector, Ũ⃗.
+U = [1 5; 2 6] + im * [3 7; 4 8]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">2×2 Matrix{Complex{Int64}}:
+ 1+3im  5+7im
+ 2+4im  6+8im</code></pre><p>Remember what you learned about Julia arrays! Why would I write the matrix this way?</p><pre><code class="language-julia hljs">Ũ⃗ = operator_to_iso_vec(U)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">8-element Vector{Int64}:
+ 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8</code></pre><pre><code class="language-julia hljs">iso_vec_to_operator(Ũ⃗)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">2×2 Matrix{Complex{Int64}}:
+ 1+3im  5+7im
+ 2+4im  6+8im</code></pre><p>Physics check: What&#39;s an efficiency that we might be able to leverage when storing <span>$\rho$</span> that you don&#39;t see here?</p><pre><code class="language-julia hljs"># Warning: The isomorphism `density_to_iso_vec` is not the same as `operator_to_iso_vec`.
+ρ = [1 2; 3 4] + im * [5 6; 7 8]
+ρ̃⃗ = density_to_iso_vec(ρ)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">8-element Vector{Int64}:
+ 1
+ 3
+ 2
+ 4
+ 5
+ 7
+ 6
+ 8</code></pre><p><strong>Exercise</strong> </p><ul><li>Just how big are these vectors for a single qubit state? A two qubit state? </li><li>What about quantum channels?</li></ul><h2 id="II.-Quantum-dynamics"><a class="docs-heading-anchor" href="#II.-Quantum-dynamics">II. Quantum dynamics</a><a id="II.-Quantum-dynamics-1"></a><a class="docs-heading-anchor-permalink" href="#II.-Quantum-dynamics" title="Permalink"></a></h2><p><strong>Quantum systems</strong></p><p>First up, we are going to look at some dynamics convenience functions in Piccolo.</p><ul><li>Let&#39;s flip a qubit from the ground state to the excited state.</li><li>Introduce the isomorphisms that make quantum dynamics real-valued.  </li><li>Use <a href="https://docs.harmoniqs.co/PiccoloQuantumObjects/dev/">PiccoloQuantumObjects</a> to make a quantum system.</li><li>Use a rollout to integrate the quantum system forward in time.</li></ul><p class="math-container">\[H(u(t)) = \underbrace{u_1(t) XI + u_2(t) YI}_\text{qubit 1} 
+    + \underbrace{u_3(t) IX + u_4(t) IY}_\text{qubit 2} + \underbrace{u_5(t) XX}_\text{coupling}\]</p><pre><code class="language-julia hljs">H_drives = [
+    PAULIS.X ⊗ PAULIS.I,
+    PAULIS.Y ⊗ PAULIS.I,
+    PAULIS.I ⊗ PAULIS.X,
+    PAULIS.I ⊗ PAULIS.Y,
+    PAULIS.X ⊗ PAULIS.X
+]
+
+system = QuantumSystem(H_drives)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">QuantumSystem: levels = 4, n_drives = 5</code></pre><ul><li>Quantum systems contain the operators we need, including the real valued versions.</li></ul><pre><code class="language-julia hljs">get_drift(system)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">4×4 SparseArrays.SparseMatrixCSC{ComplexF64, Int64} with 0 stored entries:
+     ⋅          ⋅          ⋅          ⋅    
+     ⋅          ⋅          ⋅          ⋅    
+     ⋅          ⋅          ⋅          ⋅    
+     ⋅          ⋅          ⋅          ⋅    </code></pre><ul><li>Quick check: What do we expect to see?</li></ul><pre><code class="language-julia hljs">get_drives(system)[1]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">4×4 SparseArrays.SparseMatrixCSC{ComplexF64, Int64} with 4 stored entries:
+     ⋅          ⋅      1.0+0.0im      ⋅    
+     ⋅          ⋅          ⋅      1.0+0.0im
+ 1.0+0.0im      ⋅          ⋅          ⋅    
+     ⋅      1.0+0.0im      ⋅          ⋅    </code></pre><pre><code class="language-julia hljs">system.H(randn(system.n_drives))</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">4×4 SparseArrays.SparseMatrixCSC{ComplexF64, Int64} with 12 stored entries:
+          ⋅             1.03208-0.0300109im  …  -1.35906+0.0im
+  1.03208+0.0300109im           ⋅               0.610696-1.0478im
+ 0.610696+1.0478im     -1.35906+0.0im            1.03208-0.0300109im
+ -1.35906+0.0im        0.610696+1.0478im                 ⋅    </code></pre><ul><li>Quick check: How big will this operator be?</li></ul><pre><code class="language-julia hljs">system.G(randn(system.n_drives))</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">8×8 SparseArrays.SparseMatrixCSC{Float64, Int64} with 40 stored entries:
+   ⋅         -0.748511   -0.45111    …   1.12976    -1.67731    -0.0282423
+  0.748511     ⋅           ⋅              ⋅         -0.0282423  -1.67731
+  0.45111      ⋅           ⋅            -0.0282423    ⋅          1.12976
+   ⋅          0.45111     0.748511      -1.67731     1.12976      ⋅ 
+   ⋅         -1.12976     1.67731       -0.748511   -0.45111      ⋅ 
+ -1.12976      ⋅          0.0282423  …    ⋅           ⋅         -0.45111
+  1.67731     0.0282423    ⋅              ⋅           ⋅         -0.748511
+  0.0282423   1.67731    -1.12976        0.45111     0.748511     ⋅ </code></pre><ul><li>We can use a system to perform a rollout.</li></ul><pre><code class="language-julia hljs"># Timing information (e.g. 20 ns superconducting qubit gate)
+T = 40
+Δt = 0.5
+timesteps = fill(Δt, T)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">40-element Vector{Float64}:
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ ⋮
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5
+ 0.5</code></pre><pre><code class="language-julia hljs"># Controls
+controls = randn(system.n_drives, T + 1);</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">5×41 Matrix{Float64}:
+ -0.192976   1.51629    -1.27529   …  -0.809342    0.791013     0.771139
+  1.68979   -0.279634   -0.767858     -0.0849856   0.404975    -0.0782606
+  0.315975  -0.23213     0.375845     -0.301382    0.582139     0.46862
+  0.166577  -0.0600409  -1.25386       0.542118   -1.86174      0.836567
+ -0.260813  -1.46123     1.65408       0.0265883   0.00184781   0.95562</code></pre><pre><code class="language-julia hljs">unitary_rollout(controls, timesteps, system)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">32×41 Matrix{Float64}:
+ 1.0   0.641823     0.457662  …  -0.011918    0.127227    0.120502
+ 0.0   0.0435325    0.329316      0.372037    0.220352    0.399733
+ 0.0   0.750614     0.366133      0.544586    0.228119    0.485619
+ 0.0   0.0722386    0.32301      -0.0348248   0.142998   -0.374511
+ 0.0   0.00457179  -0.347449      0.564748    0.747483    0.348779
+ 0.0  -0.102446     0.343685  …  -0.0946765   0.125117   -0.498224
+ 0.0   0.0836819   -0.222096     -0.470652   -0.511475   -0.189459
+ 0.0   0.00305514   0.394387      0.119336    0.163644    0.209377
+ 0.0  -0.0654048    0.290355      0.22644     0.103573    0.368296
+ 1.0   0.641824     0.405682      0.170323    0.367169    0.00992179
+ ⋮                            ⋱                           ⋮
+ 0.0  -0.102446    -0.373989     -0.379692   -0.0704556  -0.702964
+ 0.0   0.0776745   -0.317856      0.587627    0.41328     0.698375
+ 0.0  -0.714618    -0.274229  …   0.281902    0.215013   -0.0745987
+ 0.0  -0.0654048    0.314768      0.0877565   0.197407   -0.128976
+ 1.0   0.641823     0.376557     -0.523956   -0.597694   -0.440975
+ 0.0   0.22295      0.448272     -0.14678    -0.0760651  -0.0885984
+ 0.0   0.0826485   -0.256464      0.245497    0.0765019   0.147365
+ 0.0  -0.102543    -0.410124  …   0.224435    0.208211    0.481541
+ 0.0   0.00457179   0.384667      0.401011    0.575996    0.184841</code></pre><pre><code class="language-julia hljs"># Entangling gate
+U_goal = GATES.CX
+
+# How&#39;d we do?
+println(&quot;ℱ = &quot;, unitary_rollout_fidelity(U_goal, controls, timesteps, system))</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">ℱ = 0.04016281101271073</code></pre><p><strong>We have all the pieces we need to solve!</strong></p><p>Let&#39;s put Piccolo to work.</p><pre><code class="language-julia hljs"># Piccolo (we&#39;ll learn more about this later)
+prob = UnitarySmoothPulseProblem(system, U_goal, T, Δt);</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">DirectTrajOptProblem
+   timesteps            = 40
+   duration             = 19.5
+   variable names       = (:Ũ⃗, :a, :da, :dda, :Δt)
+   knot point dimension = 48
+</code></pre><pre><code class="language-julia hljs"># save these initial controls for later
+a_init = prob.trajectory.a
+plot(prob.trajectory, :a)</code></pre><img src="3fc5488e.png" alt="Example block output"/><pre><code class="language-julia hljs">solve!(
+    prob,
+    max_iter=20, print_level=1, verbose=false, options=IpoptOptions(eval_hessian=false)
+)
+
+ℱ = unitary_rollout_fidelity(prob.trajectory, system)
+
+println(&quot;The fidelity is &quot;, ℱ)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+The fidelity is 0.9791586907388493</code></pre><pre><code class="language-julia hljs">a_final = prob.trajectory.a
+plot(prob.trajectory, :a)</code></pre><img src="6e9145bc.png" alt="Example block output"/><h2 id="III.-GRAPE"><a class="docs-heading-anchor" href="#III.-GRAPE">III. GRAPE</a><a id="III.-GRAPE-1"></a><a class="docs-heading-anchor-permalink" href="#III.-GRAPE" title="Permalink"></a></h2><p>The <a href="https://doi.org/10.1016/j.jmr.2004.11.004">GRAPE algorithm</a> comes from NMR in 2004, and there is a <a href="https://github.com/JuliaQuantumControl/GRAPE.jl">Julia version</a>. We&#39;ll reproduce GRAPE in this example.</p><pre><code class="language-julia hljs"># We work with timesteps between knot points
+timesteps = fill(Δt, T)
+
+# Let&#39;s use our previous function to compute the fidelity
+GRAPE(controls) = abs(1 - unitary_rollout_fidelity(U_goal, controls, timesteps, system))</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">GRAPE (generic function with 1 method)</code></pre><h3 id="Automatic-differentiation"><a class="docs-heading-anchor" href="#Automatic-differentiation">Automatic differentiation</a><a id="Automatic-differentiation-1"></a><a class="docs-heading-anchor-permalink" href="#Automatic-differentiation" title="Permalink"></a></h3><ul><li>It&#39;s quick to test! Compare different algorithms, e.g., <code>Newton()</code>, <code>GradientDescent()</code>, <code>LBFGS()</code></li><li>If you switch from gradient descent to a quasi-Newton method, you get to <a href="https://www.sciencedirect.com/science/article/abs/pii/S1090780711002552">write another paper</a>.</li></ul><pre><code class="language-julia hljs">result_GRAPE = optimize(GRAPE, collect(a_init), LBFGS())</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi"> * Status: success
+
+ * Candidate solution
+    Final objective value:     1.332268e-15
+
+ * Found with
+    Algorithm:     L-BFGS
+
+ * Convergence measures
+    |x - x&#39;|               = 9.21e-09 ≰ 0.0e+00
+    |x - x&#39;|/|x&#39;|          = 8.31e-09 ≰ 0.0e+00
+    |f(x) - f(x&#39;)|         = 6.66e-16 ≰ 0.0e+00
+    |f(x) - f(x&#39;)|/|f(x&#39;)| = 5.00e-01 ≰ 0.0e+00
+    |g(x)|                 = 8.46e-09 ≤ 1.0e-08
+
+ * Work counters
+    Seconds run:   68  (vs limit Inf)
+    Iterations:    59
+    f(x) calls:    176
+    ∇f(x) calls:   176
+</code></pre><pre><code class="language-julia hljs">a_GRAPE = Optim.minimizer(result_GRAPE)
+println(&quot;The fidelity is &quot;, unitary_rollout_fidelity(U_goal, a_GRAPE, timesteps, system))</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">The fidelity is 0.9999999999999987</code></pre><ul><li>What do we think we&#39;ll see here?</li></ul><pre><code class="language-julia hljs">series(cumsum(timesteps), a_GRAPE)</code></pre><img src="fd8d1296.png" alt="Example block output"/><h3 id="Analytic-gradients"><a class="docs-heading-anchor" href="#Analytic-gradients">Analytic gradients</a><a id="Analytic-gradients-1"></a><a class="docs-heading-anchor-permalink" href="#Analytic-gradients" title="Permalink"></a></h3><p><strong>Calculus practice</strong></p><ul><li>We can combine forward and backward rollouts to compute the gradients,</li></ul><p class="math-container">\[\begin{align}
+    \frac{\partial U(T)}{\partial u_k(t)} &amp;= U(T, t) (-i H_k \Delta t) U(t) \\
+   \Rightarrow \langle\psi_\text{goal} | \frac{\partial U(T)}{\partial u_k(t)} |\psi_\text{init.}\rangle &amp;= -i \Delta t \langle\psi_\text{goal}^\text{bwd.}(t) | H_k |\psi_\text{init.}^\text{fwd.}(t) \rangle.
+\end{align}\]</p><p><strong>Exercise</strong></p><ul><li>Implement gradient descent using the analytic gradients.</li><li>Sometimes, there are insights you can only get by opening up the black box, e.g. <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.97.042122">d-GRAPE</a>.</li></ul><h2 id="IV.-Function-Spaces"><a class="docs-heading-anchor" href="#IV.-Function-Spaces">IV. Function Spaces</a><a id="IV.-Function-Spaces-1"></a><a class="docs-heading-anchor-permalink" href="#IV.-Function-Spaces" title="Permalink"></a></h2><ul><li>Pick a function basis for the controls and optimize the coefficients. Some choices are <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.84.022326">trig functions</a> or <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.97.062346">Slepians</a>.</li><li>Our optimization parameters are now coefficients of the basis,</li></ul><p class="math-container">\[u(t) = u_0 + \sum_{j=1}^{n} c_j a_j(t)\]</p><ul><li>The modes <span>$a_j(t)$</span> stay fixed, and the coefficients <span>$c_j$</span> are optimized.</li></ul><pre><code class="language-julia hljs"># First n = 5 entries in a Fourier series, including the constant term
+n = 5
+fourier_series = [cos.(π * j * (0:T-1) / T .- π/2) for j in 0:n-1]
+
+function get_controls(coefficients)
+    a(c) = sum(cⱼ * aⱼ for (cⱼ, aⱼ) in zip(c, fourier_series))
+    return stack([a(c) for c in eachrow(coefficients)], dims=1)
+end
+
+function GRAFS(coefficients)
+    controls = get_controls(coefficients)
+    return abs(1 - unitary_rollout_fidelity(U_goal, controls, timesteps, system))
+end</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">GRAFS (generic function with 1 method)</code></pre><pre><code class="language-julia hljs">c_init = rand(system.n_drives, n)
+result_GRAFS = optimize(GRAFS, c_init, LBFGS())</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi"> * Status: success
+
+ * Candidate solution
+    Final objective value:     0.000000e+00
+
+ * Found with
+    Algorithm:     L-BFGS
+
+ * Convergence measures
+    |x - x&#39;|               = 7.44e-09 ≰ 0.0e+00
+    |x - x&#39;|/|x&#39;|          = 5.32e-09 ≰ 0.0e+00
+    |f(x) - f(x&#39;)|         = 0.00e+00 ≤ 0.0e+00
+    |f(x) - f(x&#39;)|/|f(x&#39;)| = NaN ≰ 0.0e+00
+    |g(x)|                 = 3.54e-08 ≰ 1.0e-08
+
+ * Work counters
+    Seconds run:   29  (vs limit Inf)
+    Iterations:    91
+    f(x) calls:    379
+    ∇f(x) calls:   379
+</code></pre><pre><code class="language-julia hljs">a_GRAFS = Optim.minimizer(result_GRAFS)
+println(&quot;The fidelity is &quot;, 1 - unitary_rollout_fidelity(U_goal, a_GRAFS, timesteps, system))</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">The fidelity is 0.993771770586151</code></pre><pre><code class="language-julia hljs">series(cumsum(timesteps), get_controls(a_GRAFS))</code></pre><img src="7359c373.png" alt="Example block output"/><ul><li>These shapes are a lot nicer! But performance depends a lot on the expressivity and initial condition.</li></ul><pre><code class="language-julia hljs">c_init = randn(system.n_drives, n)
+result_GRAFS_2 = optimize(GRAFS, c_init, LBFGS())</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi"> * Status: success
+
+ * Candidate solution
+    Final objective value:     0.000000e+00
+
+ * Found with
+    Algorithm:     L-BFGS
+
+ * Convergence measures
+    |x - x&#39;|               = 4.81e-13 ≰ 0.0e+00
+    |x - x&#39;|/|x&#39;|          = 2.21e-13 ≰ 0.0e+00
+    |f(x) - f(x&#39;)|         = 0.00e+00 ≤ 0.0e+00
+    |f(x) - f(x&#39;)|/|f(x&#39;)| = NaN ≰ 0.0e+00
+    |g(x)|                 = 9.65e-08 ≰ 1.0e-08
+
+ * Work counters
+    Seconds run:   29  (vs limit Inf)
+    Iterations:    82
+    f(x) calls:    365
+    ∇f(x) calls:   365
+</code></pre><pre><code class="language-julia hljs">a_GRAFS_2 = Optim.minimizer(result_GRAFS_2)
+println(&quot;The fidelity is &quot;, 1 - unitary_rollout_fidelity(U_goal, a_GRAFS_2, timesteps, system))</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">The fidelity is 0.6996978325918379</code></pre><pre><code class="language-julia hljs">f = Figure()
+ax = Axis(f[1,1])
+series!(ax, cumsum(timesteps), get_controls(a_GRAFS))
+ax = Axis(f[2,1])
+series!(ax, cumsum(timesteps), get_controls(a_GRAFS_2))
+f</code></pre><img src="79372cc2.png" alt="Example block output"/><p><strong>Exercise: A filtering approach</strong></p><ul><li>Pass the controls through a spectral filter: Look up Slepians and consider how to bound the bandwidth by choice of basis.</li><li>How might we shape the bandwidth of the controls? (Remember, we can just rely on automatic differentiation!)</li></ul><h2 id="V.-States-in-costs"><a class="docs-heading-anchor" href="#V.-States-in-costs">V. States in costs</a><a id="V.-States-in-costs-1"></a><a class="docs-heading-anchor-permalink" href="#V.-States-in-costs" title="Permalink"></a></h2><p><strong>Exercise:</strong></p><ul><li>Let&#39;s switch to a transmon, which has more than two levels and can be <em>leaky</em>.</li></ul><p class="math-container">\[H(u(t)) = \tfrac{1}{2} \eta a^\dagger a^\dagger a a + u_1(t) (a + a^\dagger) - i u_2(t) (a - a^\dagger)\]</p><ul><li><p>The optimizer can exploit the higher levels!</p></li><li><p>Add a leakage penalty to a guard state. <em>Notice that working with states can be awkward.</em></p></li></ul><pre><code class="language-julia hljs">T = 40
+Δt = 0.25
+timesteps = fill(Δt, T)
+
+function Transmon(n)
+    a = annihilate(n)
+    x = a + a&#39;
+    p = -im * (a - a&#39;)
+    η = 0.1
+    return QuantumSystem(1/2 * a&#39;a&#39;a*a, [x, p])
+end
+
+transmon_2 = Transmon(2)
+transmon_4 = Transmon(4)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">QuantumSystem: levels = 4, n_drives = 2</code></pre><pre><code class="language-julia hljs">function TransmonGRAFS(
+    goal::AbstractPiccoloOperator, coefficients, timesteps, sys::AbstractQuantumSystem
+)
+    controls = get_controls(coefficients)
+    return abs(1 - unitary_rollout_fidelity(goal, controls, timesteps, sys))
+end</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">TransmonGRAFS (generic function with 1 method)</code></pre><ul><li>Quick aside: <em>Embedded operators</em></li></ul><pre><code class="language-julia hljs">U_emb(n) = EmbeddedOperator(GATES.X, 1:2, n)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">U_emb (generic function with 1 method)</code></pre><pre><code class="language-julia hljs">U_emb(4).operator</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">4×4 Matrix{ComplexF64}:
+ 0.0+0.0im  1.0+0.0im  0.0+0.0im  0.0+0.0im
+ 1.0+0.0im  0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  0.0+0.0im  0.0+0.0im</code></pre><pre><code class="language-julia hljs">unembed(U_emb(4))</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">2×2 Matrix{ComplexF64}:
+ 0.0+0.0im  1.0+0.0im
+ 1.0+0.0im  0.0+0.0im</code></pre><pre><code class="language-julia hljs">sys2, U2 = Transmon(2), U_emb(2)
+c_init = randn(sys2.n_drives, n)
+result_GRAFS_3 = optimize(a -&gt; TransmonGRAFS(U2, a, timesteps, sys2), c_init, LBFGS())</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi"> * Status: success
+
+ * Candidate solution
+    Final objective value:     8.881784e-16
+
+ * Found with
+    Algorithm:     L-BFGS
+
+ * Convergence measures
+    |x - x&#39;|               = 2.16e-08 ≰ 0.0e+00
+    |x - x&#39;|/|x&#39;|          = 1.02e-08 ≰ 0.0e+00
+    |f(x) - f(x&#39;)|         = 2.44e-15 ≰ 0.0e+00
+    |f(x) - f(x&#39;)|/|f(x&#39;)| = 2.75e+00 ≰ 0.0e+00
+    |g(x)|                 = 2.93e-10 ≤ 1.0e-08
+
+ * Work counters
+    Seconds run:   0  (vs limit Inf)
+    Iterations:    11
+    f(x) calls:    34
+    ∇f(x) calls:   34
+</code></pre><pre><code class="language-julia hljs">a_GRAFS_3 = get_controls(Optim.minimizer(result_GRAFS_3))
+println(&quot;The fidelity is &quot;, unitary_rollout_fidelity(U2, a_GRAFS_3, timesteps, sys2))</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">The fidelity is 1.0000000000000009</code></pre><ul><li>Quick check: What might happen now?</li></ul><pre><code class="language-julia hljs">println(
+    &quot;The fidelity is &quot;, unitary_rollout_fidelity(U_emb(4), a_GRAFS_3, timesteps, Transmon(4))
+)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">The fidelity is 0.08858572794785598</code></pre><p><strong>TODO:</strong> </p><ul><li>Add an L2 penalty to states that are not in the computational basis.</li><li>Use a modified GRAPE cost to penalize leakage while maintaining fidelity.</li><li>Study how leakage and fidelity change with the penalty.</li><li>Study how the anharmonicity η affects leakage.</li></ul></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../5_optimization_methods/">« Optimization Methods</a><a class="docs-footer-nextpage" href="../7_trajectory_optimization/">Trajectory Optimization »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.14.1 on <span class="colophon-date" title="Friday 18 July 2025 02:44">Friday 18 July 2025</span>. Using Julia version 1.11.6.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
