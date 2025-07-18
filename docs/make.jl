@@ -15,10 +15,16 @@ makedocs(;
     pages=[
         "Home" => "index.md",
         "Creating this package" => "creation.md",
-        "Julia and linear algebra" => "monday.md",
-        "Applying operators to quantum states" => "tuesday_morning.md",
-        "Schrodinger and Lindblad evolution" => "tuesday_afternoon.md",
-        "Monte Carlo wave function evolution" => "tuesday_evening.md",
+        "Intro to Julia" => "1_intro_to_julia.md",
+        "Introduction to State Vector Simulation" => "2_introduction_to_state_vector_simulation.md",
+        "Dynamics and QuantumOptics.jl" => "3_dynamics_and_quantumoptics.md",
+        "Quantum Trajectories" => "4_quantum_trajectories.md",
+        "Optimization Methods" => "5_optimization_methods.md",
+        "GRAPE Demos" => "6_grape_demos.md",
+        "Trajectory Optimization" => "7_trajectory_optimization.md",
+        "Nonlinear Trajectory Optimization" => "8_nonlinear_trajectory_optimization.md",
+        "Quantum Trajectory Optimization" => "9_quantum_trajectory_optimization.md",
+        "Clifford" => "10_clifford.md",
     ],
 )
 

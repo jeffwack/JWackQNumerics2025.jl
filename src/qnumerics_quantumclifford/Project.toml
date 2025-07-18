@@ -1,0 +1,8 @@
+[deps]
+BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+Literate = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
+QuantumClifford = "0525e862-1e90-11e9-3e4d-1b39d7109de1"
+QuantumOpticsBase = "4f57444f-1401-5e15-980d-4471b28d5678"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+TypeTree = "04da0e3b-1cad-4b2c-a963-fc1602baf1af"
